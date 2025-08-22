@@ -14,9 +14,9 @@ h1 {
 }
 
 .react-header{
-    display: inline-flex;
-    align-items: center;
-    background-color: #333;
+    /* display: inline-flex;
+    align-items: center; */
+    background-color: #21222a;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -25,8 +25,15 @@ h1 {
     text-align: center;
 }
 
+.react-nav{
+    display: flex;
+    align-items: center;
+    position: static;
+    left: 10px;
+}
+
 .react-header-text{
-    color: skyblue;
+    color: #61dafb;
     margin-left: 10px;
     padding-bottom: 10px;
 }
