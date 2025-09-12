@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: black;
+  background-color: white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -59,4 +59,67 @@ header > img{
 
 .entry-japan{
   position: absolute;
+  display: flex;
+  top: 130px;
+  left: 50px;
+}
+
+.main-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.japan-photo{
+  width: 125px;
+  height: 168px;
+  overflow: hidden; 
+  border-radius: 5px;
+}
+.japan-text{
+  position: relative;
+  left: 20px;
+  top: 5px;
+}
+.japan-place{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0px;
+}
+
+.japan-place > img {
+  width: 10px;
+  height: 13px;
+}
+.japan-place > span > p{
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0.17em;
+  color: #2B283A;
+}
+.japan-place > a{
+  font-weight: 400;
+  font-size: 11px;
+  text-decoration: underline solid;
+  color: #918E9B;
+  position: relative;
+  left: 5px;
+}
+.japan-site > h1{
+  font-weight: 700;
+  font-size: 25px;
+  color: #2B283A;
+  margin: 0px;
+}
+.japan-date > p{
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.japan-explain >p{
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 150%;
 }
