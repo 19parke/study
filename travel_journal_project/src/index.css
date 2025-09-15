@@ -57,11 +57,16 @@ header > img{
   padding: 20px 10px 0px 0px;
 }
 
+.container{
+  margin: 45px 40px;
+
+}
+
 .entry-japan{
-  position: absolute;
   display: flex;
   top: 130px;
   left: 50px;
+  margin-bottom: 30px;
 }
 
 .main-image {
@@ -75,6 +80,8 @@ header > img{
   height: 168px;
   overflow: hidden; 
   border-radius: 5px;
+  flex-shrink: 0;
+  margin-right: 10px;
 }
 .japan-text{
   position: relative;
