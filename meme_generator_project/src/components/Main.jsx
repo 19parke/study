@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Main(){
 
@@ -7,6 +7,14 @@ export default function Main(){
         bottomText: 'Walk into Mordor', 
         imageUrl: 'http://i.imgflip.com/1bij.jpg'
     })
+
+    const [memeArray, setMemeArray] = useState([])
+
+    useEffect(()=>{
+        fetch("https://api.imgflip.com/get_memes")
+        .then(res => res.json())
+        .then(data => setMemeArray(data.data.memes))
+    }, [])
 
     function handleChange(event){
         // input 에 있는 name property
@@ -19,7 +27,19 @@ export default function Main(){
         })
     }
 
+    function getMeme(){
+        const randomNumber = Math.floor(Math.random() * memeArray.length)
+        setMeme((prevMeme) => {
+            return {
+                ...prevMeme, 
+                imageUrl: memeArray[randomNumber].url
+            }
+        })
+    }
+
+
     return (
+
         <main>
             <div className="form">
                 <label>Top Text
@@ -41,7 +61,7 @@ export default function Main(){
                         value={meme.bottomText}
                     />
                 </label>
-                <button>Get a new meme image 🖼</button>
+                <button onClick={getMeme}>Get a new meme image 🖼</button>
             </div>
             <div className="meme">
                 <img src={meme.imageUrl} />

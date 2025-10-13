@@ -11,6 +11,8 @@ export default function Main(){
 
     const [recipe, setRecipe] = React.useState("");
 
+    const recipeSection = React.useRef(null);
+
 
     function handleSubmit(formData){
         // event.preventDefault(); // 매번 전체 새로고침 하는 것 방지
@@ -25,6 +27,18 @@ export default function Main(){
         setRecipe(result);
     }
 
+    React.useEffect(() => {
+        if((recipe !== "") && (recipeSection.current !== null)){
+            recipeSection.current.scrollIntoView({behavior: "smooth"})
+            // iframe
+            // const yCoord = recipeSection.current.getBoundingClientRect().top + window.scrollY
+            // window.scroll({
+            //     top: yCoord,
+            //     behavior: "smooth"
+            // })
+        }
+    }, [recipe])
+
     return (
         <main>
             <form action={handleSubmit} className="add-ingredient-form">
@@ -36,7 +50,7 @@ export default function Main(){
                 />
                 <button>Add ingredient</button>
             </form>
-           {ingredient.length > 0 && <IngredientsList ingredient={ingredient} getRecipe={getRecipe}/>}
+           {ingredient.length > 0 && <IngredientsList ref={recipeSection} ingredient={ingredient} getRecipe={getRecipe}/>}
            {recipe && <ClaudeRecipe recipe={recipe}/>}
         </main>
     )
