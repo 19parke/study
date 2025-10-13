@@ -1,0 +1,67 @@
+:root {
+  font-family:Inter, Karla, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color: #0B2434;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.mainboard{
+  width: 640px;
+  height: 640px;
+  top: 30px;
+  left: 20px;
+  border-radius: 20px;
+  background-color: #F5F5F5;
+}
+
+.container{
+  position: relative;
+  left: 65px;
+  top: 45%;
+  display: grid;
+  grid-template-columns: repeat(5, 110px);
+  grid-template-rows: repeat(2, 100px);
+}
+
+.die{
+  width: 72px;
+  height: 72px;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.die > span{
+  position: relative;
+  font-family: "Karla";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+}
+
+main > button{
+  position: relative;
+  width: 180px;
+  height: 70px;
+  top: 310px;
+  font-family: "Karla";
+  font-weight: 700;
+  line-height: 100%;
+  font-size: 30px;
+  border-radius: 7px;
+  color: #fff;
+  background-color: #5035FF;
+  border: none;
+  box-shadow: 0px 3.2px 8px rgba(0, 0, 0, 0.18);
+}
