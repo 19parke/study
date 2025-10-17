@@ -30,9 +30,21 @@ header > p{
   border-radius: 4px;
   padding: 6px 6px;
   text-align: center;
-  background-color: #10A95B;
   margin-top: 25px;
   margin-left: 20%;
+}
+
+.won{
+  background-color: #10A95B;
+}
+
+.lost{
+  background-color: #BA2A2A;
+}
+
+.lose{
+  background-color: #7A5EA7;
+  border: 1px dashed #282726;
 }
 
 .game-status > span {
@@ -44,6 +56,12 @@ header > p{
   top: 5px;
 }
 
+.game-status > span.farewellmessage {
+  position: relative;
+  top: 20px;
+  font-style: italic;
+}
+ 
 .game-status > p{
   color: #F9F4DA;
   font-weight: 500;
@@ -68,6 +86,22 @@ header > p{
   border-radius: 3px;
   width: auto;
   padding: 6px;
+  position: relative;
+}
+
+.language-chips > span.lost::before{
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: inherit;
 }
 
 .wordList{
@@ -89,9 +123,17 @@ header > p{
   border-bottom: 1px solid #F9F4DA;
 }
 
-.letter > span {
+.letter > span{
   position: relative;
   top: 30%;
+}
+
+.letter > span.reveal{
+  color: #BA2A2A; 
+  display: block;
+}
+.letter > span.correctletter{
+  color: #F9F4DA;
 }
 
 .keyboard{
@@ -146,4 +188,9 @@ button.new-game {
 
 .keyboard > button.unclicked{
   background-color: #FCBA29;
+}
+
+.keyboard > button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }

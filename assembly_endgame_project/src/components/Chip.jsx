@@ -5,7 +5,7 @@ export default function Chip(props){
         color: props.color
     }
     return (
-        <span style={styles}>
+        <span style={styles} className={props.className}>
             {props.name}
         </span>
     )

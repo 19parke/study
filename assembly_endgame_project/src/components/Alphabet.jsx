@@ -16,6 +16,9 @@ export default function Alphabet(props){
                     onClick={() => props.addGuess(letter)}
                     key={letter}
                     className={className}
+                    disabled={props.isGameOver}
+                    aria-disabled={props.guess.includes(letter)}
+                    aria-label={`Letter ${letter}`}
                 >
             {letter}
         </button>
