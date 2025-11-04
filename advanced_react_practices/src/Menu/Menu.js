@@ -4,6 +4,7 @@ const MenuContext = React.createContext();
 
 export default function Menu({children}){
     const [open, setOpen] = React.useState(true)
+    const menuId = React.useId()
 
     function toggle(){
         setOpen(prevOpen => !prevOpen)
@@ -11,10 +12,12 @@ export default function Menu({children}){
 
 
     return (
-        <MenuContext.Provider value={false}>
-            <div className="menu">
+        <MenuContext.Provider value={{open, toggle, menuId}} >
+            <div className="menu" role="menu">
                 {children}
             </div>
         </MenuContext.Provider>
     )
 }
+
+export { MenuContext }
