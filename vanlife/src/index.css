@@ -5,7 +5,6 @@
  
 body{
   margin: 0;
-  padding: 0;
 }
 
 header{
@@ -36,6 +35,7 @@ nav a{
   font-size: 16px;
   line-height: 16px;
   color: #4D4D4D;
+  font-family: Inter
 }
 
 nav a:active{
@@ -43,10 +43,10 @@ nav a:active{
 }
 
 footer{
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
+  position: absolute;
+  top: 130%;
+  width: 96%;
+  margin: 0px;
   padding: 30px;
   background-color: #252525;
   color: #AAAAAA;
@@ -75,6 +75,7 @@ footer{
   font-size: 70px;
   line-height: 42px;
   color: #FFFFFF;
+  font-family: Inter
 }
 
 .home-container > p{
@@ -82,6 +83,7 @@ footer{
   font-size: 25px;
   line-height: 24px;
   color: #FFFFFF;
+  font-family: Inter
 }
 
 .home-container > button{
@@ -96,6 +98,7 @@ footer{
   background-color: #FF8C38;
   margin: 20px;
   border: none;
+  font-family: Inter
 }
 
 .about-container{
@@ -117,6 +120,7 @@ footer{
   font-size: 45px;
   line-height: 50px;
   margin: 30px;
+  font-family: Inter
 }
 
 .about-container > p{
@@ -124,6 +128,7 @@ footer{
   font-size: 16px;
   line-height: 22px;
   margin: 10px 80px 0 30px;
+  font-family: Inter
 }
 
 .explore-container{
@@ -141,6 +146,7 @@ footer{
   position: relative;
   left: 40px;
   top: 10px;
+  font-family: Inter
 }
 
 .explore-container > button{
@@ -155,4 +161,205 @@ footer{
   position: relative;
   top: 20px;
   left: 40px;
+  font-family: Inter;
+}
+
+.filter-buttons{
+  display: flex;
+  gap: 20px;
+
+}
+
+.filter-buttons > button{
+  width: 104px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #FFEAD0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4D4D4D;
+  border: none;
+  font-family: Inter;
+}
+
+.filter-buttons > a {
+  position: relative;
+  top: 10px;
+  left: 30%;
+  text-decoration: underline;
+  color: #4D4D4D;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Inter;
+}
+
+
+.vans-header{
+  margin: 50px;
+}
+
+.vansElement{
+  position: absolute;
+  left: 18%;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.vanElement > a{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.vanElement img{
+  width: 230px;
+  height: 230px;
+  border-radius: 5px;
+}
+
+.van-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.van-info h3{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0px;
+  font-family: Inter;
+}
+
+.price-sec{
+  position: relative;
+  top: 10px;
+}
+
+.price{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.per{
+  position: relative;
+  top: -10px;
+  left: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 30px;
+  font-family: Inter;
+}
+
+.vanElement button{
+  width: 85px;
+  height: 33px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  line-height: 30px;
+  color: #FFEAD0;
+  position: relative;
+  top: -10px;
+  font-family: Inter;
+}
+
+.simple{
+  background-color: #E17654;
+}
+
+.rugged{
+  background-color: #115E59;
+}
+
+.luxury{
+  background-color: #161616;
+}
+
+.vanDetail{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+
+}
+
+.vanDetail > img{
+  width: 500px;
+  height: 490px;
+  border-radius: 5px;
+}
+
+.detail-content-wrapper{
+  position: relative;
+  top: 50px;
+  width: 500px;
+}
+
+.typebutton{
+  position: relative;
+  top: 0px;
+  width: 85px;
+  height: 34px;
+  border-radius: 5px;
+  background-color: #E17654;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 31px;
+  color: #FFEAD0;
+  border: none;
+  font-family: Inter
+}
+
+.detail-content-wrapper > h1{
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 33px;
+  font-family: Inter;
+  color: #161616;
+}
+
+.price-detail{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 44px;
+}
+
+.per-detail{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 44px;
+}
+
+.detail-content-wrapper > p{
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Inter;
+}
+
+.rent-button{
+  width: 500px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: #FF8C38;
+  color: #FFEAD0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  font-family: Inter;
+  position: relative;
+  top: 20px;
+}
+
+.back{
+  margin: 30px;
 }
