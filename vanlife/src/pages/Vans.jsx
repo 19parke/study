@@ -1,5 +1,5 @@
 export default function Vans(){
     return (
-        <h1>This is where vans go</h1>
+        <h1>This is where vans goo</h1>
     )
 }
