@@ -1,0 +1,132 @@
+:root {
+  font-family: Inter, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: black;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+*/
+body {
+  margin: 0;
+  /* display: flex; */
+  /* place-items: center;
+  min-width: 320px;
+  min-height: 100vh; */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+header{
+  display: flex;
+  background-color: #F55A5A;
+  height: 70px;
+  justify-content: center;
+  margin: 0;
+}
+
+header > h1{
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: -7.5%;
+  padding: 13px 0px 0px 0px;
+}
+
+header > img{
+  width: 24px;
+  height: 24px;
+  padding: 20px 10px 0px 0px;
+}
+
+.container{
+  margin: 45px 40px;
+
+}
+
+.entry-japan{
+  display: flex;
+  top: 130px;
+  left: 50px;
+  margin-bottom: 30px;
+}
+
+.main-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.japan-photo{
+  width: 125px;
+  height: 168px;
+  overflow: hidden; 
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+.japan-text{
+  position: relative;
+  left: 20px;
+  top: 5px;
+}
+.japan-place{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0px;
+}
+
+.japan-place > img {
+  width: 10px;
+  height: 13px;
+}
+.japan-place > span > p{
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0.17em;
+  color: #2B283A;
+}
+.japan-place > a{
+  font-weight: 400;
+  font-size: 11px;
+  text-decoration: underline solid;
+  color: #918E9B;
+  position: relative;
+  left: 5px;
+}
+.japan-site > h1{
+  font-weight: 700;
+  font-size: 25px;
+  color: #2B283A;
+  margin: 0px;
+}
+.japan-date > p{
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.japan-explain >p{
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 150%;
+}
