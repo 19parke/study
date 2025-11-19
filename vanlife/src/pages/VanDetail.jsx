@@ -12,11 +12,9 @@ export default function VanDetail() {
         .then((data) => setVanData(data.vans))
     }, [params.id])
 
-    console.log(vanData)
-
     return (
-        <>
-            {vanData ? 
+        <div>
+            {vanData.type !== undefined ? (
                 <>
                     <div className="back">
                         <a>Back to all vans</a>
@@ -31,9 +29,8 @@ export default function VanDetail() {
                             <button className="rent-button">Rent this van</button>
                         </div>
                     </div>
-                </> : 
-                <h1>Loading...</h1>
+                </>) : <h1>Loading...</h1>
             }
-        </>
+        </div>
     )
 }
